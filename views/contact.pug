@@ -1,0 +1,48 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/contact.css")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Bebas+Neue|Comfortaa|Merriweather+Sans&display=swap")
+        title Contact Us
+    body
+        include includes/header
+        article.container
+            form(action="/contact_sent", method="post")
+                h1 Contact Us
+                table
+                    tbody
+                        tr
+                            td
+                                label(for="first-name") First Name:
+                            td
+                                input#firstName(type="text" name="firstName" minlength="3" required)
+                        tr
+                            td
+                                label(for="last-name") Last Name:
+                            td
+                                input#last-name(type="text" name="lastName" minlength="3" required)
+                        tr
+                            td
+                                label(for="mobile-phone") Mobile:
+                            td
+                                input#mobile-phone(type="text" name="mobilePhone" minlength = "10" maxlength="10" required)
+                        tr
+                            td
+                                label(for="email-address") Email:
+                            td
+                                input#email-address(type="email" name="email" minlength="10" required)
+                        tr
+                            td
+                                label(for="company") Company:
+                            td
+                                input#company(type="text" name="company" minlength="2" required)
+                        tr
+                            td
+                                label(for="file-upload") File Upload:
+                            td
+                                input#file-upload(type="file" name="file" class="file" required)
+                br
+                .submitBtn
+                    button#submit(type="submit" class="submit") Submit
+        include includes/footer

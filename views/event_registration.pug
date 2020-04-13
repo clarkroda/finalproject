@@ -1,0 +1,39 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Dancing+Script|Liu+Jian+Mao+Cao&display=swap")
+        link(rel="stylesheet", href="css/event_registration.css")
+        title Event Registration
+    body
+        form(action="/event_registered", method="post")
+            h1 Register for the Sports Event
+            table
+                tbody
+                    tr
+                        td
+                            label(for="id-number") ID:
+                        td
+                            input#id-number(type="text" name="idNumber" minlength = "6" maxlength="6" size="5" required)
+                    tr
+                        td
+                            label(for="full-name") Full Name:
+                        td
+                            input#full-name(type="text" name="fullName" minlength="3" size="25" required)
+                    tr
+                        td
+                            label(for="address") Address:
+                        td
+                            input#address(type="text" name="address" minlength="0" size="40" required)
+                    tr
+                        td
+                            label(for="student-status") Status:
+                        td
+                            select#student-status(name="status" required)
+                                option(value="") --Select an option--
+                                option(value="Student") Student
+                                option(value="Staff") Staff
+                                option(value="Volunteer") Volunteer
+            br
+            button(type="submit" id="submit") Submit
+        
